@@ -9,10 +9,11 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("venda")
+@Path("/vendas")
 public class VendaRecurso {
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Venda> listar () {
-        return Venda.listAll(Sort.ascending("valorTotal"));
+        return Venda.listAll(Sort.ascending("codigo"));
     }
 }
