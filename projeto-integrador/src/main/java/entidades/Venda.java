@@ -1,6 +1,6 @@
 package entidades;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Venda {
+public class Venda extends PanacheEntityBase{
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
 
